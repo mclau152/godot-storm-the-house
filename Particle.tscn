@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqq8oriwqesun"]
+
+[ext_resource type="Texture2D" uid="uid://bip7dp7coxb2p" path="res://icon.svg" id="1_csh07"]
+[ext_resource type="Script" path="res://Particle.gd" id="2_aqmc6"]
+
+[sub_resource type="Curve" id="Curve_kwbdt"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="Particle" type="CPUParticles2D"]
+emitting = false
+amount = 4
+lifetime = 0.25
+one_shot = true
+explosiveness = 0.1
+texture = ExtResource("1_csh07")
+emission_shape = 1
+emission_sphere_radius = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 150.0
+initial_velocity_max = 150.0
+scale_amount_min = 0.5
+scale_amount_max = 0.5
+scale_amount_curve = SubResource("Curve_kwbdt")
+script = ExtResource("2_aqmc6")

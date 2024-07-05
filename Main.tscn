@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://cr4d7mcvju1db"]
+
+[ext_resource type="PackedScene" uid="uid://cctra2vbrrf18" path="res://Enemy.tscn" id="1_4avj4"]
+[ext_resource type="Script" path="res://Main.gd" id="1_umlon"]
+[ext_resource type="PackedScene" uid="uid://derlvq7aonhix" path="res://ui.tscn" id="3_d8hxl"]
+[ext_resource type="PackedScene" uid="uid://3iwa5to0hwp3" path="res://house.tscn" id="4_bocix"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_umlon")
+
+[node name="Enemy" parent="." instance=ExtResource("1_4avj4")]
+position = Vector2(242, 397)
+
+[node name="Enemy2" parent="." instance=ExtResource("1_4avj4")]
+position = Vector2(105, 357)
+
+[node name="Enemy3" parent="." instance=ExtResource("1_4avj4")]
+position = Vector2(135, 509)
+
+[node name="Enemy4" parent="." instance=ExtResource("1_4avj4")]
+position = Vector2(98, 124)
+
+[node name="Enemy5" parent="." instance=ExtResource("1_4avj4")]
+position = Vector2(127, 206)
+
+[node name="Enemy6" parent="." instance=ExtResource("1_4avj4")]
+position = Vector2(92, 278)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+
+[node name="SpawnTimer" type="Timer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 711.0
+offset_top = 6.0
+offset_right = 926.0
+offset_bottom = 108.0
+scale = Vector2(2, 2)
+text = "Score: 0"
+horizontal_alignment = 2
+
+[node name="ui" parent="." instance=ExtResource("3_d8hxl")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="house" parent="." instance=ExtResource("4_bocix")]
